@@ -18,7 +18,7 @@ export default class MessagesList extends Component {
         const action = gotMessagesFromServer(messages)
         store.dispatch(action)
       })
-    store.subscribe(() => this.setState(store.getState()))
+    this.unsubscribe = store.subscribe(() => this.setState(store.getState()))
   }
 
   componentWillUnmount() {
@@ -30,13 +30,14 @@ export default class MessagesList extends Component {
     const channelId = Number(this.props.match.params.channelId); // because it's a string "1", not a number!
     const messages = this.state.messages;
     const filteredMessages = messages.filter(message => message.channelId === channelId);
+    console.log(this.state);
 
     return (
       <div>
         <ul className="media-list">
           { filteredMessages.map(message => <Message message={message} key={message.id} />) }
         </ul>
-        <NewMessageEntry />
+        <NewMessageEntry channelId={channelId} />
       </div>
     );
   }
