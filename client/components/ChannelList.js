@@ -49,3 +49,4 @@ const mapStateToProps = (state) => {
 
 const ChannelListContainer = connect(mapStateToProps)(ChannelList);
 export default ChannelListContainer;
+//TODO: figure out ChannelListContainer exported to whom is asking
