@@ -17,4 +17,4 @@ export default function NewChannelEntry (props) {
 }
 
 /** Write your `connect` component below! **/
-
+//TODO:// ask what channel target list target.channelName 
