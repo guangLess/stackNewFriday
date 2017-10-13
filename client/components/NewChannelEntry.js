@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+
 export default function NewChannelEntry (props) {
   return (
     <form>
@@ -10,8 +12,9 @@ export default function NewChannelEntry (props) {
       <div className="form-group">
         <button type="submit" className="btn btn-default">Create Channel</button>
       </div>
-    </form>
+    </form> 
   );
 }
 
 /** Write your `connect` component below! **/
+
